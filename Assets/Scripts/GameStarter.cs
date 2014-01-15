@@ -20,7 +20,7 @@ public class GameStarter : MonoBehaviour {
 			
 			GameObject go = GameObject.Find ("MobCaptain");
 			Mob m = (Mob)go.GetComponent("Mob");
-			GameObject go2 = GameObject.Find ("PMBridgeCaptainDesk");
+			GameObject go2 = GameObject.Find ("PMCaptainDesk");
 			PathMarker pm = (PathMarker)go2.GetComponent("PathMarker");
 			
 			Debug.Log ("Mob = "+m.name);

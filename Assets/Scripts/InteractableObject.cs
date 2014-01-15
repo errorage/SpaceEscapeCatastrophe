@@ -9,11 +9,11 @@ public class InteractableObject : MonoBehaviour {
 	public int possibleProblems = 0;
 	public string[] problems;
 	
-	public string currentProblem;
+	public string currentProblem = "";
 	
 	// Use this for initialization
 	void Start () {
-		
+		currentProblem = "";
 	}
 	
 	// Update is called once per frame

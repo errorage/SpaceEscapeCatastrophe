@@ -6,6 +6,7 @@ public class ComputerInternet : InteractableObject {
 	
 	// Use this for initialization
 	void Start () {
+		currentProblem = "";
 		problems = new string[]{"UnplugRouter"};
 		possibleProblems = problems.Length;
 		World.computerInternet = this;

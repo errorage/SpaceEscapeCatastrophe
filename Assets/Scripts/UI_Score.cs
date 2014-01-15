@@ -5,9 +5,11 @@ public class UI_Score : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if(this.name == "UISpeed"){
+		if (this.name == "UISpeed") {
 			World.uiSpeed = this;
-		}else{
+		} else if (name == "UIPoliceDistance") {
+			World.uiPoliceDistance = this;
+		} else {
 			World.uiScore = this;
 		}
 	}

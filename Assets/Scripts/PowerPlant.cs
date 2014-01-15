@@ -8,6 +8,7 @@ public class PowerPlant : InteractableObject {
 	
 	// Use this for initialization
 	void Start () {
+		currentProblem = "";
 		problems = new string[]{"OilPowerPlant"};
 		possibleProblems = problems.Length;
 		World.powerplant = this;
@@ -17,6 +18,11 @@ public class PowerPlant : InteractableObject {
 	
 	// Update is called once per frame
 	void Update () {
+		if (currentProblem != "") {
+			powerplantOn = false;
+		} else {
+			powerplantOn = true;
+		}
 	
 	}
 	

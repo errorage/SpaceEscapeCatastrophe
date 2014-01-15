@@ -8,6 +8,7 @@ public class O2Generator : InteractableObject {
 	
 	// Use this for initialization
 	void Start () {
+		currentProblem = "";
 		problems = new string[]{"O2Malfunction", "PipeUnplugged"};
 		possibleProblems = problems.Length;
 		World.o2Generator = this;

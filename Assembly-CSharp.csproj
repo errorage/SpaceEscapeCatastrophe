@@ -5,20 +5,21 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{0687A1D0-5367-D67D-7D7A-7BCAD7E0D3DC}</ProjectGuid>
+	<ProjectGuid>{6EE66E23-7C24-7849-5061-85CB2E39087B}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
 	<AssemblyName>Assembly-CSharp</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
 	<DebugSymbols>true</DebugSymbols>
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_WEBPLAYER;WEBPLUG;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_1_2;UNITY_4_1;ENABLE_PROFILER;UNITY_EDITOR</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_WEBPLAYER;WEBPLUG;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_GENERICS;ENABLE_SUBSTANCE;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_3_1;UNITY_4_3;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -36,6 +37,7 @@
 	<Reference Include="System" />
     <Reference Include="System.XML" />
 	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
 	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
@@ -44,32 +46,59 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AnimateWalk.cs" />
+     <Compile Include="Assets\Scripts\Box.cs" />
+     <Compile Include="Assets\Scripts\CamCamera.cs" />
+     <Compile Include="Assets\Scripts\CameraMenu.cs" />
+     <Compile Include="Assets\Scripts\Camera_Level_1.cs" />
      <Compile Include="Assets\Scripts\ComputerInternet.cs" />
      <Compile Include="Assets\Scripts\ComputerNav.cs" />
      <Compile Include="Assets\Scripts\ComputerThrust.cs" />
      <Compile Include="Assets\Scripts\Desk.cs" />
+     <Compile Include="Assets\Scripts\Door_level_1.cs" />
      <Compile Include="Assets\Scripts\Engine.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\GameStarter.cs" />
+     <Compile Include="Assets\Scripts\Hinge_Level_1.cs" />
      <Compile Include="Assets\Scripts\InteractableObject.cs" />
+     <Compile Include="Assets\Scripts\Level1.cs" />
+     <Compile Include="Assets\Scripts\LevelEnder_Level_1.cs" />
      <Compile Include="Assets\Scripts\MainLight.cs" />
+     <Compile Include="Assets\Scripts\MenuNewGame.cs" />
+     <Compile Include="Assets\Scripts\MenuQuit.cs" />
      <Compile Include="Assets\Scripts\Mob.cs" />
+     <Compile Include="Assets\Scripts\Mob_Level_1.cs" />
+     <Compile Include="Assets\Scripts\Mob_Menu.cs" />
      <Compile Include="Assets\Scripts\O2Generator.cs" />
      <Compile Include="Assets\Scripts\PathMarker.cs" />
+     <Compile Include="Assets\Scripts\PlayerCamera.cs" />
+     <Compile Include="Assets\Scripts\PlayerHead.cs" />
      <Compile Include="Assets\Scripts\PowerPlant.cs" />
+     <Compile Include="Assets\Scripts\SpeechBubble.cs" />
      <Compile Include="Assets\Scripts\StartingPlatform.cs" />
      <Compile Include="Assets\Scripts\ThrusterLight.cs" />
+     <Compile Include="Assets\Scripts\ThrusterParticleSystem.cs" />
      <Compile Include="Assets\Scripts\UIBar.cs" />
      <Compile Include="Assets\Scripts\UIDescription.cs" />
      <Compile Include="Assets\Scripts\UI_Background.cs" />
+     <Compile Include="Assets\Scripts\UI_Black.cs" />
      <Compile Include="Assets\Scripts\UI_ButtonClose.cs" />
      <Compile Include="Assets\Scripts\UI_GameOver.cs" />
+     <Compile Include="Assets\Scripts\UI_Indicator.cs" />
      <Compile Include="Assets\Scripts\UI_Key.cs" />
      <Compile Include="Assets\Scripts\UI_KeyText.cs" />
+     <Compile Include="Assets\Scripts\UI_Machine.cs" />
+     <Compile Include="Assets\Scripts\UI_MainMenu.cs" />
      <Compile Include="Assets\Scripts\UI_MobButton.cs" />
+     <Compile Include="Assets\Scripts\UI_Notice.cs" />
      <Compile Include="Assets\Scripts\UI_Score.cs" />
      <Compile Include="Assets\Scripts\Warning.cs" />
      <Compile Include="Assets\Scripts\World.cs" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{CDCCC9EB-4420-D2B0-79D5-92419C6B4970}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

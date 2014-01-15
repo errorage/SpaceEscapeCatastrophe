@@ -13,7 +13,7 @@ public class Warning : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 	
 	public void useWith(InteractableObject io)
@@ -24,6 +24,7 @@ public class Warning : MonoBehaviour {
 	}
 	
 	void OnMouseDown(){
+		Debug.Log ("ABC");
 		if(tiedToInteractableObject != null){
 			tiedToInteractableObject.interactWith();
 		}

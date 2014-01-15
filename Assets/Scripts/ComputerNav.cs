@@ -7,6 +7,7 @@ public class ComputerNav : InteractableObject {
 	
 	// Use this for initialization
 	void Start () {
+		currentProblem = "";
 		problems = new string[]{"RestartNav", "BSODNav"};
 		possibleProblems = problems.Length;
 		World.computerNav = this;
@@ -26,6 +27,7 @@ public class ComputerNav : InteractableObject {
 	}
 	
 	public override void interactWith(){
+
 		Debug.Log ("ComputerNav");
 		World.enableInteractionWindow(currentProblem);
 	}

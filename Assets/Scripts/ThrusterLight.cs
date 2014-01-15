@@ -21,7 +21,7 @@ public class ThrusterLight : MonoBehaviour {
 	void Update () {
 		if(light.enabled){
 			flickerProgress += 0.05f;
-			light.intensity = 3.56f + Mathf.Sin(flickerProgress);
+			light.intensity = 0.3f + (Mathf.Sin(flickerProgress) * 0.05f);
 		}
 	}
 }
